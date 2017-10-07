@@ -23,11 +23,13 @@ Partial Class Form4
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         Me.icnNotify = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.SuspendLayout()
         '
         'icnNotify
         '
+        Me.icnNotify.Icon = CType(resources.GetObject("icnNotify.Icon"), System.Drawing.Icon)
         Me.icnNotify.Text = "Right-Click me to View Favorites..."
         Me.icnNotify.Visible = True
         '
@@ -39,7 +41,6 @@ Partial Class Form4
         Me.Name = "Form4"
         Me.ShowInTaskbar = False
         Me.Text = "Form4"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
         Me.ResumeLayout(False)
 
     End Sub

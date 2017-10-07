@@ -75,6 +75,9 @@
     <Compile Include="Class1.vb" />
     <Compile Include="Customer.vb" />
     <Compile Include="CustomerCollection.vb" />
+    <Compile Include="ExitMenuItem.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +120,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="WebFavoriteListViewItem.vb" />
+    <Compile Include="WebFavoriteMenuItem.vb">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -155,6 +161,9 @@
       <Project>{58bc28af-bd74-4d4f-9276-e3b06f960993}</Project>
       <Name>MyFavorites</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
