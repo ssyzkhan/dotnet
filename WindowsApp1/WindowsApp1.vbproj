@@ -73,6 +73,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.vb" />
+    <Compile Include="ColorPalette.Designer.vb">
+      <DependentUpon>ColorPalette.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ColorPalette.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorPaletteButton.vb" />
     <Compile Include="Customer.vb" />
     <Compile Include="CustomerCollection.vb" />
     <Compile Include="ExitMenuItem.vb">

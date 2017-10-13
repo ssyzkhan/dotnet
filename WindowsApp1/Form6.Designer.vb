@@ -22,28 +22,43 @@ Partial Class Form6
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PaintCanvas1 = New WindowsApp1.PaintCanvas()
+        Me.canvas = New WindowsApp1.PaintCanvas()
+        Me.ColorPalette = New WindowsApp1.ColorPalette()
         Me.SuspendLayout()
         '
-        'PaintCanvas1
+        'canvas
         '
-        Me.PaintCanvas1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PaintCanvas1.Location = New System.Drawing.Point(0, 0)
-        Me.PaintCanvas1.Name = "PaintCanvas1"
-        Me.PaintCanvas1.Size = New System.Drawing.Size(750, 418)
-        Me.PaintCanvas1.TabIndex = 0
+        Me.canvas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.canvas.BackColor = System.Drawing.Color.White
+        Me.canvas.Location = New System.Drawing.Point(0, 0)
+        Me.canvas.Name = "canvas"
+        Me.canvas.Size = New System.Drawing.Size(750, 318)
+        Me.canvas.TabIndex = 0
+        '
+        'ColorPalette
+        '
+        Me.ColorPalette.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ColorPalette.Location = New System.Drawing.Point(0, 324)
+        Me.ColorPalette.Name = "ColorPalette"
+        Me.ColorPalette.Size = New System.Drawing.Size(750, 90)
+        Me.ColorPalette.TabIndex = 1
         '
         'Form6
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(750, 418)
-        Me.Controls.Add(Me.PaintCanvas1)
+        Me.ClientSize = New System.Drawing.Size(750, 411)
+        Me.Controls.Add(Me.ColorPalette)
+        Me.Controls.Add(Me.canvas)
         Me.Name = "Form6"
         Me.Text = "Form6"
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents PaintCanvas1 As PaintCanvas
+    Friend WithEvents canvas As PaintCanvas
+    Friend WithEvents ColorPalette As ColorPalette
 End Class
